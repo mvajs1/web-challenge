@@ -7,10 +7,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.Collection;
+import java.util.List;
 
 public class FileWriter {
 
-    public void writeDataToFile(Collection<String> data, String fileName) {
+    public void writeDataToFile(List<String> data, String fileName) {
         if (data.isEmpty()) {
             return;
         }
@@ -26,14 +27,16 @@ public class FileWriter {
 
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(fileOutputStream));
 
-        data.forEach(dataItem -> {
+        for (int i = 0; i < data.size(); i++) {
             try {
-                writer.write(dataItem);
-                writer.newLine();
+                writer.write(data.get(i));
+                if (i != data.size() - 1) {
+                    writer.newLine();
+                }
             } catch (IOException e) {
                 throw new RuntimeException("Unable to write data to file.", e);
             }
-        });
+        }
 
         try {
             writer.close();

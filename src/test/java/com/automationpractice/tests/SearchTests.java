@@ -9,6 +9,7 @@ import com.automationpractice.pages.SearchResultsPage;
 import com.automationpractice.tests.base.BaseTest;
 import com.automationpractice.utilities.FileWriter;
 import java.util.Collection;
+import java.util.List;
 import java.util.stream.Collectors;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -42,7 +43,7 @@ public class SearchTests extends BaseTest {
         assertDoesNotThrow(searchResultsPage::waitForPageToOpen, "Search results page did not open successfully.");
 
         // Get search result titles in collection
-        Collection<String> searchResults = searchResultsPage.getSearchResults()
+        List<String> searchResults = searchResultsPage.getSearchResults()
                 .stream().map(result -> result.getAttribute("title")).collect(Collectors.toList());
 
         // Output search results to file (file will be created in 'target' folder)

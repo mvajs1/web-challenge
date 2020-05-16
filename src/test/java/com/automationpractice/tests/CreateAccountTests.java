@@ -1,7 +1,8 @@
 package com.automationpractice.tests;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import com.automationpractice.configuration.ConfigurationProvider;
 import com.automationpractice.configuration.Properties;
@@ -82,6 +83,6 @@ public class CreateAccountTests extends BaseTest {
     assertDoesNotThrow(accountPage::waitForPageToOpen, "Account page did not open successfully after registration.");
 
     // Verify successful login
-    assertTrue(accountPage.getSignOutButtonVisibility(), "Sign out button is not visible, login unsuccessful.");
+    assertThat("Sign out button is not visible, login unsuccessful.", accountPage.getSignOutButtonVisibility(), is(true));
   }
 }

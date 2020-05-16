@@ -19,7 +19,7 @@ public class DriverProvider {
   private static final String ARGUMENTS_DELIMITER = " ";
 
   private DriverProvider() {}
-  private static Map<String, Function<List<String>, WebDriver>> browserMap = new HashMap<>();
+  private static final Map<String, Function<List<String>, WebDriver>> browserMap = new HashMap<>();
 
   static {
     String chromeDriverUrl = ConfigurationProvider.getProperty(Properties.CHROME_DRIVER_URL);

@@ -1,7 +1,9 @@
 package com.automationpractice.tests;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.automationpractice.configuration.ConfigurationProvider;
 import com.automationpractice.configuration.Properties;
@@ -33,7 +35,7 @@ public class ProductCategoriesTests extends BaseTest {
     @DisplayName("Verify that 'Popular' category has 7 products")
     public void verifyPopularCategoryHas7ProductsTest() {
         homePage.clickOnPopularCategoryTab();
-        assertEquals(7, homePage.getProducts().size(), "Category 'Popular' does not contain 7 products.");
+        assertThat("Category 'Popular' does not contain 7 products.", homePage.getProducts().size(), is(equalTo(7)));
     }
 
     @Test
@@ -41,6 +43,6 @@ public class ProductCategoriesTests extends BaseTest {
     @DisplayName("Verify that 'Best Sellers' category has 7 products")
     public void verifyBestSellersCategoryHas7ProductsTest() {
         homePage.clickOnBestSellerCategoryTab();
-        assertEquals(7, homePage.getProducts().size(), "Category 'Best Sellers' does not contain 7 products.");
+        assertThat("Category 'Best Sellers' does not contain 7 products.", homePage.getProducts().size(), is(equalTo(7)));
     }
 }

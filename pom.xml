@@ -10,6 +10,7 @@
 
   <properties>
     <junit.version>5.6.2</junit.version>
+    <hamcrest.version>2.2</hamcrest.version>
     <selenium.version>3.141.59</selenium.version>
     <commons.version>2.6</commons.version>
     <commons.configuration2.version>2.7</commons.configuration2.version>
@@ -27,6 +28,11 @@
       <artifactId>junit-jupiter-api</artifactId>
       <version>${junit.version}</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <artifactId>hamcrest</artifactId>
+      <groupId>org.hamcrest</groupId>
+      <version>${hamcrest.version}</version>
     </dependency>
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>

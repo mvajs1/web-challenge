@@ -8,7 +8,6 @@ import com.automationpractice.pages.HomePage;
 import com.automationpractice.pages.SearchResultsPage;
 import com.automationpractice.tests.base.BaseTest;
 import com.automationpractice.utilities.FileWriter;
-import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.junit.jupiter.api.BeforeEach;

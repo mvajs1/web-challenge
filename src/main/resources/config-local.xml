@@ -1,0 +1,4 @@
+<configuration>
+  <properties fileName="properties/driver.properties"/>
+  <properties fileName="properties/local.properties"/>
+</configuration>

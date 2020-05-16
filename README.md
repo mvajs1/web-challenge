@@ -24,3 +24,4 @@ Dependencies will be automatically dowloaded and tests will execute.
 - Target URL can be changed inside `/src/main/resources/properties/local.properties`
 - All files generated during test execution are saved inside `target` folder.
 - Tests are configured to run in parallel. To change that behavior, open `src/main/resources/junit-platform.properties` and set `junit.jupiter.execution.parallel.enabled` to `false`.
+- There is a known issue with `BeanUtils` library that outputs an error in the console (https://issues.apache.org/jira/browse/BEANUTILS-477). This does not affect the test execution in any way. 

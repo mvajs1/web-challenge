@@ -13,7 +13,7 @@
     <hamcrest.version>2.2</hamcrest.version>
     <selenium.version>3.141.59</selenium.version>
     <commons.version>2.6</commons.version>
-    <commons.configuration2.version>2.7</commons.configuration2.version>
+    <commons.configuration2.version>2.8.0</commons.configuration2.version>
     <beanutils.version>1.9.3</beanutils.version>
     <faker.version>1.0.2</faker.version>
     <maven.compiler.version>3.8.1</maven.compiler.version>
